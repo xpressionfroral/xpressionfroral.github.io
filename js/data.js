@@ -1,7 +1,7 @@
 const WHATSAPP_NUMBER = "573106009069"; // Assuming this is correct from screenshots (+57 310 6009069)
 
 const products = [
-  { name: "Ramo Cumpleaños Rosado", price: 0, category: "cumpleanos", badge: "Consultar Precio", description: "Sin descripción", images: ["assets/IMG-20260617-WA0000.jpg"] },
+  { name: "Ramo Cumpleaños Rosado", price: 155000, category: "cumpleanos", badge: "", description: "48 rosas, Gypso, Mariposas, Cinta tarjeta.", images: ["assets/IMG-20260617-WA0000.jpg"] },
   { name: "Corazón Marcado con Peluche", price: 170000, category: "romanticos", badge: "Personalizado", description: "48 rosas, Gypso, Espejo personalizado, Tarjeta, Moño.", images: ["assets/IMG-20260612-WA0004.jpg"] },
   { name: "Corazón de Rosas y Espejo", price: 170000, category: "romanticos", badge: "", description: "48 rosas, Gypso, Espejo personalizado, Tarjeta, Moño.", images: ["assets/IMG-20260612-WA0005.jpg"] },
   { name: "Ramo 48 Rosas y Girasoles", price: 175000, category: "romanticos", badge: "Más Vendido", description: "48 rosas, 3 girasoles, Gypso, Tarjeta, Mariposas, Moño coquette.", images: ["assets/IMG-20260612-WA0006.jpg"] },
