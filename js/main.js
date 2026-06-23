@@ -38,10 +38,10 @@ function openProduct(index) {
 }
 
 function renderProducts() {
-  const term = search.value.trim().toLocaleLowerCase("es");
+  const term = search ? search.value.trim().toLocaleLowerCase("es") : "";
   const visible = products.filter((product) => {
     const matchesFilter = activeFilter === "todos" || product.category === activeFilter;
-    const matchesSearch = `${product.name} ${product.description}`.toLocaleLowerCase("es").includes(term);
+    const matchesSearch = term === "" || `${product.name} ${product.description}`.toLocaleLowerCase("es").includes(term);
     return matchesFilter && matchesSearch;
   });
 
@@ -87,7 +87,7 @@ filters.forEach((filter) => {
     renderProducts();
   });
 });
-search.addEventListener("input", renderProducts);
+if (search) search.addEventListener("input", renderProducts);
 
 document.querySelectorAll("[data-product]").forEach((link) => {
   link.href = whatsappLink(link.dataset.product);
