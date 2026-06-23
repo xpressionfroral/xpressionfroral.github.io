@@ -7,14 +7,10 @@ const path = require("path");
 
 // Read data.js and extract products
 const dataJs = fs.readFileSync(path.join(__dirname, "js", "data.js"), "utf-8");
-// Replace const/let with var so eval works in this scope
 const fixedJs = dataJs.replace(/\bconst\b/g, "var").replace(/\blet\b/g, "var");
 eval(fixedJs);
 
 const SITE = "https://xpressionfroral.github.io/";
-
-// Read the template (product.html)
-const template = fs.readFileSync(path.join(__dirname, "product.html"), "utf-8");
 
 products.forEach((product, index) => {
   const name = product.name || "Arreglo Floral";
@@ -25,52 +21,34 @@ products.forEach((product, index) => {
     ? SITE + product.images[0]
     : SITE + "assets/portada.jpeg";
   const pageUrl = SITE + "product-" + index + ".html";
+  const targetUrl = SITE + "product.html?id=" + index;
   const priceText = (product.price > 0)
     ? " - " + new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 }).format(product.price)
     : "";
   const ogTitle = name + priceText + " | Xpression Floral";
 
-  // Build the new HTML by replacing OG tags and injecting PRODUCT_ID
-  let html = template;
-
-  // Replace OG title
-  html = html.replace(
-    /<meta property="og:title"[^>]*>/,
-    `<meta property="og:title" content="${ogTitle.replace(/"/g, '&quot;')}">`
-  );
-  // Replace OG description
-  html = html.replace(
-    /<meta property="og:description"[^>]*>/,
-    `<meta property="og:description" content="${desc.replace(/"/g, '&quot;')}">`
-  );
-  // Replace OG image
-  html = html.replace(
-    /<meta property="og:image" id="og-image"[^>]*>/,
-    `<meta property="og:image" content="${imageUrl}">`
-  );
-  // Replace OG url
-  html = html.replace(
-    /<meta property="og:url"[^>]*>/,
-    `<meta property="og:url" content="${pageUrl}">`
-  );
-  // Replace page title
-  html = html.replace(
-    /<title>[^<]*<\/title>/,
-    `<title>${ogTitle.replace(/</g, '&lt;')}</title>`
-  );
-
-  // Remove the inline OG-injection script (not needed in static pages)
-  html = html.replace(/<script>\s*\/\/ Inyectar Open Graph[\s\S]*?\(\)\);\s*<\/script>/, "");
-
-  // Inject PRODUCT_ID before product.js so it knows which product to load
-  html = html.replace(
-    '<script src="js/product.js" defer></script>',
-    `<script>window.PRODUCT_ID = ${index};</script>\n  <script src="js/product.js" defer></script>`
-  );
+  const html = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>${ogTitle.replace(/</g, '&lt;')}</title>
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Xpression Floral">
+  <meta property="og:title" content="${ogTitle.replace(/"/g, '&quot;')}">
+  <meta property="og:description" content="${desc.replace(/"/g, '&quot;')}">
+  <meta property="og:image" content="${imageUrl}">
+  <meta property="og:url" content="${pageUrl}">
+  <meta http-equiv="refresh" content="0; url=product.html?id=${index}">
+  <script>window.location.replace("product.html?id=${index}");</script>
+</head>
+<body>
+  <p>Redirigiendo a los detalles del producto... <a href="product.html?id=${index}">Haz clic aquí si no eres redirigido automáticamente</a>.</p>
+</body>
+</html>`;
 
   const filename = "product-" + index + ".html";
   fs.writeFileSync(path.join(__dirname, filename), html, "utf-8");
-  console.log("Created: " + filename + " -> " + name);
+  console.log("Created redirect page: " + filename);
 });
 
-console.log("\nDone! Generated " + products.length + " product pages.");
+console.log("\nDone! Generated " + products.length + " minimal redirect pages.");
