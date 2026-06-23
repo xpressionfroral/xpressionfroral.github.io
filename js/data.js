@@ -39,16 +39,30 @@ function money(value) {
   }).format(value);
 }
 
+const SITE_URL = "https://xpressionfroral.github.io/";
+
 function whatsappLink(productOrName) {
   let message;
-  if (typeof productOrName === 'string') {
-    message = `Hola, quiero información para pedir ${productOrName}. ¿Me ayudan con disponibilidad y entrega?`;
-  } else {
-    message = `Hola, quiero pedir el arreglo: ${productOrName.name} (${productOrName.description}). `;
-    if (productOrName.price > 0) {
-      message += `Vi que tiene un precio de ${money(productOrName.price)}. `;
+  if (productOrName && typeof productOrName === 'object') {
+    const name = productOrName.name || "Arreglo Floral";
+    const desc = productOrName.description || "";
+    const img = productOrName.images && productOrName.images[0] ? SITE_URL + productOrName.images[0] : "";
+    message = `Hola 🌸, me interesa este arreglo:\n\n`;
+    message += `📌 *${name}*\n`;
+    if (desc && desc !== "Consultar") {
+      message += `📝 ${desc}\n`;
     }
-    message += `¿Me ayudan con disponibilidad y entrega?`;
+    if (productOrName.price > 0) {
+      message += `💰 Precio: ${money(productOrName.price)}\n`;
+    }
+    if (img) {
+      message += `\n🖼️ Foto: ${img}\n`;
+    }
+    message += `\n¿Me ayudan con disponibilidad y entrega? ¡Gracias!`;
+  } else if (typeof productOrName === 'string') {
+    message = `Hola 🌸, quiero información sobre ${productOrName}. ¿Me ayudan con disponibilidad y entrega?`;
+  } else {
+    message = `Hola 🌸, quiero información sobre sus arreglos florales. ¿Me ayudan?`;
   }
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
