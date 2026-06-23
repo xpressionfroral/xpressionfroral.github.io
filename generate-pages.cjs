@@ -31,18 +31,14 @@ products.forEach((product, index) => {
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>${ogTitle.replace(/</g, '&lt;')}</title>
-  <meta property="og:type" content="product">
-  <meta property="og:site_name" content="Xpression Floral">
-  <meta property="og:title" content="${ogTitle.replace(/"/g, '&quot;')}">
-  <meta property="og:description" content="${desc.replace(/"/g, '&quot;')}">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="${imageUrl}">
   <meta property="og:url" content="${pageUrl}">
   <meta http-equiv="refresh" content="0; url=product.html?id=${index}">
   <script>window.location.replace("product.html?id=${index}");</script>
 </head>
 <body>
-  <p>Redirigiendo a los detalles del producto... <a href="product.html?id=${index}">Haz clic aquí si no eres redirigido automáticamente</a>.</p>
+  <script>window.location.replace("product.html?id=${index}");</script>
 </body>
 </html>`;
 
