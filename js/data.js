@@ -62,7 +62,8 @@ function whatsappLink(productOrName) {
     }
     if (productPageUrl) {
       parts.push("");
-      parts.push("Ver arreglo: " + productPageUrl);
+      parts.push("Enlace:");
+      parts.push(productPageUrl);
     }
     parts.push("");
     parts.push("Me ayudan con disponibilidad y entrega? Gracias!");
