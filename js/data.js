@@ -10,7 +10,7 @@ const products = [
   { name: "Arreglo 24 rosas", price: 120000, category: "romanticos", badge: "Personalizado", description: "24 rosas, Gypso, Espejo personalizado, Cinta, Mariposas, Tarjeta", images: ["assets/img7.jpeg"] },
   { name: "Arreglo 48 rosas", price: 200000, category: "cumpleanos", badge: "Globos", description: "48 rosas, Gypso, Fotos, Moño, 4 globos en helio, Tarjeta", images: ["assets/img8.jpeg"] },
   { name: "Arreglo 48 rosas", price: 200000, category: "romanticos", badge: "Premium", description: "48 rosas, 4 lirios, Gypso, Mariposas, Tarjeta, Peluches", images: ["assets/img9.jpeg"] },
-  { name: "Arreglo 48 rosas", price: 180000, category: "romanticos", badge: "Detalle", description: "48 rosas, Gypso, Tarjeta, Mariposas, Llavero", images: ["assets/img10 .jpeg"] },
+  { name: "Arreglo 48 rosas", price: 180000, category: "romanticos", badge: "Detalle", description: "48 rosas, Gypso, Tarjeta, Mariposas, Llavero", images: ["assets/img10.jpeg"] },
   { name: "Cilindro tradicional", price: 110000, category: "romanticos", badge: "Popular", description: "Cilindro tradicional, Con mariposas, Tarjeta", images: ["assets/img11.jpeg"] },
   { name: "Corazón grande marcado", price: 190000, category: "especiales", badge: "Personalizado", description: "Corazón grande marcado, 24 rosas, Margaritas, Peluche, Ferrero Rocher de corazón, Mariposas, Tarjeta, Globo burbuja personalizado, 4 globos en helio", images: ["assets/img12.jpeg"] },
   { name: "Arreglo Floral", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/img13.jpeg"] },
