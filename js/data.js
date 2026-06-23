@@ -39,7 +39,16 @@ function money(value) {
   }).format(value);
 }
 
-function whatsappLink(productName) {
-  const message = `Hola, quiero información para pedir ${productName}. ¿Me ayudan con disponibilidad y entrega?`;
+function whatsappLink(productOrName) {
+  let message;
+  if (typeof productOrName === 'string') {
+    message = `Hola, quiero información para pedir ${productOrName}. ¿Me ayudan con disponibilidad y entrega?`;
+  } else {
+    message = `Hola, quiero pedir el arreglo: ${productOrName.name} (${productOrName.description}). `;
+    if (productOrName.price > 0) {
+      message += `Vi que tiene un precio de ${money(productOrName.price)}. `;
+    }
+    message += `¿Me ayudan con disponibilidad y entrega?`;
+  }
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

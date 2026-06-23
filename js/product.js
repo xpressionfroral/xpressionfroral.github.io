@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#detail-price").textContent = money(product.price);
   
   const buyBtn = document.querySelector("#detail-buy-btn");
-  buyBtn.href = whatsappLink(product.name);
+  buyBtn.href = whatsappLink(product);
   
   const floatingWsp = document.querySelector("#floating-wsp");
   floatingWsp.href = whatsappLink("información sobre sus arreglos florales");

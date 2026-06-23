@@ -21,7 +21,7 @@ function openProduct(index) {
   document.querySelector("#modal-name").textContent = product.name;
   document.querySelector("#modal-description").textContent = product.description;
   document.querySelector("#modal-price").textContent = money(product.price);
-  document.querySelector("#modal-buy").href = whatsappLink(product.name);
+  document.querySelector("#modal-buy").href = whatsappLink(product);
   
   const gallery = document.querySelector("#modal-gallery");
   gallery.innerHTML = "";
