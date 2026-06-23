@@ -42,27 +42,31 @@ function money(value) {
 const SITE_URL = "https://xpressionfroral.github.io/";
 
 function whatsappLink(productOrName) {
-  let message;
-  if (productOrName && typeof productOrName === 'object') {
-    const name = productOrName.name || "Arreglo Floral";
-    const desc = productOrName.description || "";
-    const img = productOrName.images && productOrName.images[0] ? SITE_URL + productOrName.images[0] : "";
-    message = `Hola 🌸, me interesa este arreglo:\n\n`;
-    message += `📌 *${name}*\n`;
+  var parts = [];
+  if (productOrName && typeof productOrName === "object") {
+    var name = productOrName.name || "Arreglo Floral";
+    var desc = productOrName.description || "";
+    var img = (productOrName.images && productOrName.images[0]) ? SITE_URL + productOrName.images[0] : "";
+    parts.push("Hola, me interesa este arreglo:");
+    parts.push("");
+    parts.push("Producto: " + name);
     if (desc && desc !== "Consultar") {
-      message += `📝 ${desc}\n`;
+      parts.push("Incluye: " + desc);
     }
     if (productOrName.price > 0) {
-      message += `💰 Precio: ${money(productOrName.price)}\n`;
+      parts.push("Precio: " + money(productOrName.price));
     }
     if (img) {
-      message += `\n🖼️ Foto: ${img}\n`;
+      parts.push("");
+      parts.push("Foto del arreglo: " + img);
     }
-    message += `\n¿Me ayudan con disponibilidad y entrega? ¡Gracias!`;
-  } else if (typeof productOrName === 'string') {
-    message = `Hola 🌸, quiero información sobre ${productOrName}. ¿Me ayudan con disponibilidad y entrega?`;
+    parts.push("");
+    parts.push("Me ayudan con disponibilidad y entrega? Gracias!");
+  } else if (typeof productOrName === "string") {
+    parts.push("Hola, quiero informacion sobre " + productOrName + ". Me ayudan con disponibilidad y entrega?");
   } else {
-    message = `Hola 🌸, quiero información sobre sus arreglos florales. ¿Me ayudan?`;
+    parts.push("Hola, quiero informacion sobre sus arreglos florales. Me ayudan?");
   }
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  var text = parts.join("\n");
+  return "https://api.whatsapp.com/send?phone=" + WHATSAPP_NUMBER + "&text=" + encodeURIComponent(text);
 }
