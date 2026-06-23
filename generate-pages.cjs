@@ -41,7 +41,7 @@ products.forEach((product, index) => {
   <meta property="og:image:height" content="1200">
   <meta property="og:url" content="${pageUrl}">
   <noscript>
-    <meta http-equiv="refresh" content="2;url=product.html?id=${index}">
+    <meta http-equiv="refresh" content="0;url=product.html?id=${index}">
   </noscript>
   <style>
     body {
@@ -89,15 +89,10 @@ products.forEach((product, index) => {
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <script>
-    setTimeout(() => {
-      window.location.replace("product.html?id=${index}");
-    }, 1500);
+    window.location.replace("product.html?id=${index}");
   </script>
 </head>
 <body>
-  <div class="brand">Xpression <span>Floral</span></div>
-  <div class="loader"></div>
-  <p>Preparando detalle... <a href="product.html?id=${index}">Ir ahora</a></p>
 </body>
 </html>`;
 
