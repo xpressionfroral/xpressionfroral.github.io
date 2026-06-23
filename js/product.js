@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = parseInt(urlParams.get("id"));
+  var productId = (typeof window.PRODUCT_ID === "number") ? window.PRODUCT_ID : parseInt(new URLSearchParams(window.location.search).get("id"));
 
   if (isNaN(productId) || productId < 0 || productId >= products.length) {
     // If not found, redirect to index
@@ -91,12 +90,12 @@ function renderRecommended(currentId) {
     }
 
     card.addEventListener("click", () => {
-      window.location.href = `product.html?id=${item.index}`;
+      window.location.href = `product-${item.index}.html`;
     });
     card.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        window.location.href = `product.html?id=${item.index}`;
+        window.location.href = `product-${item.index}.html`;
       }
     });
     grid.appendChild(card);

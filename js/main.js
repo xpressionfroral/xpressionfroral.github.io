@@ -66,12 +66,12 @@ function renderProducts() {
       </div>`;
     setProductImage(card.querySelector(".product-image"), product);
     card.addEventListener("click", () => {
-      window.location.href = `product.html?id=${originalIndex}`;
+      window.location.href = `product-${originalIndex}.html`;
     });
     card.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        window.location.href = `product.html?id=${originalIndex}`;
+        window.location.href = `product-${originalIndex}.html`;
       }
     });
     grid.appendChild(card);
