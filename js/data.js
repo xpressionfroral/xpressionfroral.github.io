@@ -46,7 +46,11 @@ function whatsappLink(productOrName) {
   if (productOrName && typeof productOrName === "object") {
     var name = productOrName.name || "Arreglo Floral";
     var desc = productOrName.description || "";
-    var img = (productOrName.images && productOrName.images[0]) ? SITE_URL + productOrName.images[0] : "";
+    // Usamos el link a product.html?id=X para que WhatsApp
+    // genere la vista previa con foto (via Open Graph tags).
+    var productIndex = products.indexOf(productOrName);
+    var productPageUrl = (productIndex >= 0) ? SITE_URL + "product.html?id=" + productIndex : "";
+
     parts.push("Hola, me interesa este arreglo:");
     parts.push("");
     parts.push("Producto: " + name);
@@ -56,9 +60,9 @@ function whatsappLink(productOrName) {
     if (productOrName.price > 0) {
       parts.push("Precio: " + money(productOrName.price));
     }
-    if (img) {
+    if (productPageUrl) {
       parts.push("");
-      parts.push("Foto del arreglo: " + img);
+      parts.push("Ver arreglo: " + productPageUrl);
     }
     parts.push("");
     parts.push("Me ayudan con disponibilidad y entrega? Gracias!");
