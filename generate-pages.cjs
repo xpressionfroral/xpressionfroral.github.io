@@ -32,7 +32,10 @@ products.forEach((product, index) => {
 <head>
   <meta charset="utf-8">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="${ogTitle.replace(/"/g, '&quot;')}">
   <meta property="og:image" content="${imageUrl}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
   <meta property="og:url" content="${pageUrl}">
   <meta http-equiv="refresh" content="0; url=product.html?id=${index}">
   <script>window.location.replace("product.html?id=${index}");</script>
