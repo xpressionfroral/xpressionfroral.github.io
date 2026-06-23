@@ -33,15 +33,22 @@ products.forEach((product, index) => {
   <meta charset="utf-8">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${ogTitle.replace(/"/g, '&quot;')}">
+  <meta property="og:description" content="${desc.replace(/"/g, '&quot;')}">
   <meta property="og:image" content="${imageUrl}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="1200">
   <meta property="og:url" content="${pageUrl}">
-  <meta http-equiv="refresh" content="0; url=product.html?id=${index}">
-  <script>window.location.replace("product.html?id=${index}");</script>
+  <noscript>
+    <meta http-equiv="refresh" content="2;url=product.html?id=${index}">
+  </noscript>
+  <script>
+    setTimeout(() => {
+      window.location.replace("product.html?id=${index}");
+    }, 1500);
+  </script>
 </head>
 <body>
-  <script>window.location.replace("product.html?id=${index}");</script>
+  <p>Redirigiendo al producto... <a href="product.html?id=${index}">Haz clic aquí si no eres redirigido</a></p>
 </body>
 </html>`;
 
