@@ -31,6 +31,8 @@ products.forEach((product, index) => {
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0d0d">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${ogTitle.replace(/"/g, '&quot;')}">
   <meta property="og:description" content="${desc.replace(/"/g, '&quot;')}">
@@ -41,6 +43,51 @@ products.forEach((product, index) => {
   <noscript>
     <meta http-equiv="refresh" content="2;url=product.html?id=${index}">
   </noscript>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .brand span {
+      color: #d4af37;
+    }
+    .loader {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(212, 175, 55, 0.3);
+      border-radius: 50%;
+      border-top-color: #d4af37;
+      animation: spin 1s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <script>
     setTimeout(() => {
       window.location.replace("product.html?id=${index}");
@@ -48,7 +95,9 @@ products.forEach((product, index) => {
   </script>
 </head>
 <body>
-  <p>Redirigiendo al producto... <a href="product.html?id=${index}">Haz clic aquí si no eres redirigido</a></p>
+  <div class="brand">Xpression <span>Floral</span></div>
+  <div class="loader"></div>
+  <p>Preparando detalle... <a href="product.html?id=${index}">Ir ahora</a></p>
 </body>
 </html>`;
 
