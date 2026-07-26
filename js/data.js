@@ -27,7 +27,10 @@ const products = [
   { name: "Arreglo Floral", price: 0, category: "cumpleanos", badge: "Consultar Precio", description: "Consultar", images: ["assets/WhatsApp Image 2026-06-12 at 1.07.44 PM (3).jpeg"] },
   { name: "Arreglo Floral", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/WhatsApp Image 2026-06-12 at 1.07.44 PM.jpeg"] },
   { name: "Arreglo Floral", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/WhatsApp Image 2026-06-12 at 1.30.43 PM.jpeg"] },
-  { name: "Arreglo Floral", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/WhatsApp Image 2026-06-12 at 3.57.43 PM.jpeg"] }
+  { name: "Arreglo Floral", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/WhatsApp Image 2026-06-12 at 3.57.43 PM.jpeg"] },
+  { name: "Arreglo Floral", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/img18.jpeg"] },
+  { name: "Arreglo Floral", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/img19.jpeg"] },
+  { name: "Arreglo Floral", price: 0, category: "cumpleanos", badge: "Consultar Precio", description: "Consultar", images: ["assets/img20.jpeg"] }
 ];
 
 function money(value) {
