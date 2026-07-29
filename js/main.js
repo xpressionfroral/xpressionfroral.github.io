@@ -10,9 +10,18 @@ let activeFilter = "todos";
 
 function setProductImage(element, product) {
   if (product.images && product.images.length > 0) {
-    element.style.backgroundImage = `url("${product.images[0]}")`;
+    const url = product.images[0];
+    // Blurred backdrop layer
+    element.style.backgroundImage = `url("${url}")`;
     element.style.backgroundSize = "cover";
     element.style.backgroundPosition = "center";
+    // Sharp full-image overlay
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = product.name;
+    img.loading = "lazy";
+    img.className = "product-img-full";
+    element.appendChild(img);
   }
 }
 

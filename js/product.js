@@ -84,9 +84,16 @@ function renderRecommended(currentId) {
     
     const imgEl = card.querySelector(".product-image");
     if (product.images && product.images.length > 0) {
-      imgEl.style.backgroundImage = `url("${product.images[0]}")`;
+      const url = product.images[0];
+      imgEl.style.backgroundImage = `url("${url}")`;
       imgEl.style.backgroundSize = "cover";
       imgEl.style.backgroundPosition = "center";
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = product.name;
+      img.loading = "lazy";
+      img.className = "product-img-full";
+      imgEl.appendChild(img);
     }
 
     card.addEventListener("click", () => {
