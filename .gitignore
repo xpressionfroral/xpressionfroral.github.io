@@ -1,0 +1,10 @@
+# Agent and tool folders
+.agents/
+.clj-kondo/
+.lsp/
+
+# Dev/scratch files
+design-qa.md
+scratch.md
+skills-lock.json
+server.cjs
