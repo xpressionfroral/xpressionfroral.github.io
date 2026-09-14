@@ -36,7 +36,8 @@ const products = [
   { name: "Ramo Imperial Rojo Pasión", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/inf 3.jpeg"] },
   { name: "Sol Radiante 24 Girasoles", price: 180000, category: "cumpleanos", badge: "Girasoles", description: "24 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/infe 4.jpeg"] },
   { name: "Combo Cumpleaños Rosas & Oso Gigante", price: 170000, category: "cumpleanos", badge: "Cumpleaños", description: "Ramos de 48 rosas, Con espejo personalizado, Peluche gigante, Globos con helio", images: ["assets/inf 5.jpeg"] },
-  { name: "Dom Floral Deluxe & Orquídeas", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/inf 6.jpeg"] }
+  { name: "Domo Floral Deluxe & Orquídeas", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/inf 6.jpeg"] },
+  { name: "Bouquet Rayito de Sol & Peluche", price: 240000, category: "especiales", badge: "Peluche", description: "24 rosas amarillas, Margaritas amarillas, Margaritas blancas, Clavel rosado, Clavel blanco, Estrella de belén, Peluche, Tarjeta personalizada, Figuras, Moño", images: ["assets/bouquet-peluche-1.jpeg", "assets/bouquet-peluche-2.jpeg"] }
 ];
 
 function money(value) {
