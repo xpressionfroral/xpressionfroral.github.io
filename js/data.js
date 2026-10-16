@@ -37,7 +37,9 @@ const products = [
   { name: "Sol Radiante 24 Girasoles", price: 180000, category: "cumpleanos", badge: "Girasoles", description: "24 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/infe 4.jpeg"] },
   { name: "Oso Gigante con Globos", price: 330000, category: "cumpleanos", badge: "Cumpleaños", description: "Oso gigante con globos, Moño y tarjeta", images: ["assets/inf 5.jpeg"] },
   { name: "Domo Floral Deluxe & Orquídeas", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/inf 6.jpeg"] },
-  { name: "Bouquet Rayito de Sol & Peluche", price: 240000, category: "especiales", badge: "Peluche", description: "24 rosas amarillas, Margaritas amarillas, Margaritas blancas, Clavel rosado, Clavel blanco, Estrella de belén, Peluche, Tarjeta personalizada, Figuras, Moño", images: ["assets/bouquet-peluche-1.jpeg", "assets/bouquet-peluche-2.jpeg"] }
+  { name: "Bouquet Rayito de Sol & Peluche", price: 240000, category: "especiales", badge: "Peluche", description: "24 rosas amarillas, Margaritas amarillas, Margaritas blancas, Clavel rosado, Clavel blanco, Estrella de belén, Peluche, Tarjeta personalizada, Figuras, Moño", images: ["assets/bouquet-peluche-1.jpeg", "assets/bouquet-peluche-2.jpeg"] },
+  { name: "Cilindro de Lujo con Rosas", price: 135000, category: "romanticos", badge: "De Lujo", description: "Ferrero Rocher x4, 3 corazones metalizados en helio, Tarjeta personalizada", images: ["assets/cilindro-lujo-1.jpeg", "assets/cilindro-lujo-2.jpeg"] },
+  { name: "Paquete de Margaritas & 24 Rosas", price: 110000, category: "romanticos", badge: "Coquette", description: "Paquete de margarita, 24 rosas, Rusco, Moño coquette, Tarjeta personalizada, Cintas", images: ["assets/paquete-margaritas-rosas.jpeg"] }
 ];
 
 function money(value) {
