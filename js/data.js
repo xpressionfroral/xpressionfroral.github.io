@@ -31,15 +31,18 @@ const products = [
   { name: "Grado de Honor 24 Rosas", price: 115000, category: "especiales", badge: "Grados", description: "24 rosas, Girasol, Solidaster, Birrete, Pergamino, Cinta", images: ["assets/img18.jpeg"] },
   { name: "Magia de Graduación 72 Rosas", price: 190000, category: "especiales", badge: "Grados", description: "72 rosas, Birrete, Pergamino, Cinta personalizada, Moño", images: ["assets/img19.jpeg"] },
   { name: "Éxito & Felicidad 18 Rosas", price: 115000, category: "especiales", badge: "Grados", description: "18 rosas, Gypso, Birrete, Pergamino, Mariposas, Vinilo, Cinta", images: ["assets/img20.jpeg"] },
-  { name: "Magno Ramo Inicial Personalizada", price: 330000, category: "romanticos", badge: "Personalizado", description: "150 rosas, Gypso, Moño, Letra inicial", images: ["assets/inf 1.jpeg"] },
+  { name: "Magno Ramo Inicial Personalizada", price: 400000, category: "romanticos", badge: "Personalizado", description: "150 rosas, Gypso, Moño, Letra inicial", images: ["assets/inf 1.jpeg"] },
   { name: "Dilo con Flores Cinta Especial", price: 0, category: "romanticos", badge: "Consultar Precio", description: "72 rosas, Cinta personalizada", images: ["assets/inf 2.jpeg"] },
   { name: "Ramo Imperial Rojo Pasión", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/inf 3.jpeg"] },
-  { name: "Sol Radiante 24 Girasoles", price: 180000, category: "cumpleanos", badge: "Girasoles", description: "24 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/infe 4.jpeg"] },
+  { name: "Ramo de 18 Girasoles", price: 185000, category: "cumpleanos", badge: "Girasoles", description: "18 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/infe 4.jpeg"] },
+  { name: "Sol Radiante de Girasoles", price: 205000, category: "cumpleanos", badge: "Girasoles", description: "Arreglo de girasoles", images: ["assets/infe 4.jpeg"] },
   { name: "Oso Gigante con Globos", price: 330000, category: "cumpleanos", badge: "Cumpleaños", description: "Oso gigante con globos, Moño y tarjeta", images: ["assets/inf 5.jpeg"] },
   { name: "Domo Floral Deluxe & Orquídeas", price: 0, category: "especiales", badge: "Consultar Precio", description: "Consultar", images: ["assets/inf 6.jpeg"] },
   { name: "Bouquet Rayito de Sol & Peluche", price: 240000, category: "especiales", badge: "Peluche", description: "24 rosas amarillas, Margaritas amarillas, Margaritas blancas, Clavel rosado, Clavel blanco, Estrella de belén, Peluche, Tarjeta personalizada, Figuras, Moño", images: ["assets/bouquet-peluche-1.jpeg", "assets/bouquet-peluche-2.jpeg"] },
   { name: "Cilindro de Lujo con Rosas", price: 135000, category: "romanticos", badge: "De Lujo", description: "Ferrero Rocher x4, 3 corazones metalizados en helio, Tarjeta personalizada", images: ["assets/cilindro-lujo-1.jpeg", "assets/cilindro-lujo-2.jpeg"] },
-  { name: "Paquete de Margaritas & 24 Rosas", price: 110000, category: "romanticos", badge: "Coquette", description: "Paquete de margarita, 24 rosas, Rusco, Moño coquette, Tarjeta personalizada, Cintas", images: ["assets/paquete-margaritas-rosas.jpeg"] }
+  { name: "Paquete de Margaritas & 24 Rosas", price: 110000, category: "romanticos", badge: "Coquette", description: "Paquete de margarita, 24 rosas, Rusco, Moño coquette, Tarjeta personalizada, Cintas", images: ["assets/paquete-margaritas-rosas.jpeg"] },
+  { name: "Ramo Coquette de 100 Rosas", price: 220000, category: "romanticos", badge: "Coquette", description: "100 rosas, Gypso, Tarjeta personalizada, Moños coquette", images: ["assets/inf 2.jpeg"] },
+  { name: "Ramo Coquette Personalizado con 200 Rosas", price: 465000, category: "romanticos", badge: "Personalizado", description: "200 rosas, Gypso", images: ["assets/inf 3.jpeg"] }
 ];
 
 function money(value) {
