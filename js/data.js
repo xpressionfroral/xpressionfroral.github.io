@@ -42,7 +42,9 @@ const products = [
   { name: "Paquete de Margaritas & 24 Rosas", price: 110000, category: "romanticos", badge: "Coquette", description: "Paquete de margarita, 24 rosas, Rusco, Moño coquette, Tarjeta personalizada, Cintas", images: ["assets/paquete-margaritas-rosas.jpeg"] },
   { name: "Ramo Coquette Personalizado con 200 Rosas", price: 465000, category: "romanticos", badge: "Coquette", description: "200 rosas, Gypso, Letra inicial personalizada, Moños coquette", images: ["assets/ramo-coquette-200-rosas.jpeg"] },
   { name: "Ramo Coquette de 100 Rosas", price: 220000, category: "romanticos", badge: "Coquette", description: "100 rosas, Gypso, Tarjeta personalizada, Moños coquette", images: ["assets/ramo-coquette-100-rosas.jpeg"] },
-  { name: "Sol Radiante de Girasoles", price: 185000, category: "cumpleanos", badge: "Girasoles", description: "18 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/sol-radiante-18-girasoles.jpeg"] }
+  { name: "Sol Radiante de Girasoles", price: 185000, category: "cumpleanos", badge: "Girasoles", description: "18 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/sol-radiante-18-girasoles.jpeg"] },
+  { name: "Encanto Pastel de Ensueño", price: 0, category: "cumpleanos", badge: "Consultar Precio", description: "Consultar", images: ["assets/encanto-pastel-ensueno.jpeg"] },
+  { name: "Promesa de Amor & Joyero", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/promesa-amor-joyero.jpeg"] }
 ];
 
 function money(value) {
