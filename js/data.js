@@ -44,7 +44,8 @@ const products = [
   { name: "Ramo Coquette de 100 Rosas", price: 220000, category: "romanticos", badge: "Coquette", description: "100 rosas, Gypso, Tarjeta personalizada, Moños coquette", images: ["assets/ramo-coquette-100-rosas.jpeg"] },
   { name: "Sol Radiante de Girasoles", price: 185000, category: "cumpleanos", badge: "Girasoles", description: "18 girasoles, Gypso, Moño, Tarjeta personalizada", images: ["assets/sol-radiante-18-girasoles.jpeg"] },
   { name: "Encanto Pastel de Ensueño", price: 0, category: "cumpleanos", badge: "Consultar Precio", description: "Consultar", images: ["assets/encanto-pastel-ensueno.jpeg"] },
-  { name: "Promesa de Amor & Joyero", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/promesa-amor-joyero.jpeg"] }
+  { name: "Promesa de Amor & Joyero", price: 0, category: "romanticos", badge: "Consultar Precio", description: "Consultar", images: ["assets/promesa-amor-joyero.jpeg"] },
+  { name: "Cilindro Princesa Rosa & Peluche", price: 300000, category: "cumpleanos", badge: "Peluche", description: "65 rosas, Diamantes, Cintas, Corona, Tarjeta personalizada, Peluche, 3 globos metalizados en helio", images: ["assets/cilindro-princesa-rosa-peluche.jpeg"] }
 ];
 
 function money(value) {
